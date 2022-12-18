@@ -1,3 +1,0 @@
-/home/snowiemischief/projects/CLion/AOC2022/cmake-build-debug/CMakeFiles/AOC2022.dir
-/home/snowiemischief/projects/CLion/AOC2022/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/snowiemischief/projects/CLion/AOC2022/cmake-build-debug/CMakeFiles/rebuild_cache.dir
