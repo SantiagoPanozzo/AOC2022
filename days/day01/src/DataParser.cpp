@@ -40,7 +40,7 @@ void DataParser::LoadData(string fileName)
     this->Data = allData;
 }
 
-int DataParser::GetLargest()
+void DataParser::SortLargest()
 {
     vector<vector<string>> input = DataParser::Data;
     int Calories[input.size()];
@@ -58,6 +58,8 @@ int DataParser::GetLargest()
     }
 
     int largest = Calories[0];
+    int secondL = Calories[1];
+    int thirdL = Calories[2];
 
     for (int k = 0; k < input.size(); k++)
     {
@@ -65,8 +67,32 @@ int DataParser::GetLargest()
         if(Calories[k] > largest) largest = Calories[k];
     }
 
-    return largest;
+    for (int k = 0; k < input.size(); k++)
+    {
+        if(Calories[k] == largest) continue;
+        if(Calories[k] > secondL)
+        {
+            secondL = Calories[k];
+        }
+    }
+
+    for (int k = 0; k < input.size(); k++)
+    {
+        if(Calories[k] == largest || Calories[k] == secondL) continue;
+        if(Calories[k] > thirdL)
+        {
+            thirdL = Calories[k];
+        }
+    }
+
+    DataParser::Largest = largest;
+    DataParser::SecondL = secondL;
+    DataParser::ThirdL = thirdL;
 }
+
+int DataParser::GetLargest() { return DataParser::Largest; }
+
+int DataParser::ThreeLargest() { return DataParser::Largest + DataParser::SecondL + DataParser::ThirdL; }
 
 //string DataParser::ToArray(std::vector<std::vector<std::string>> input){}
 

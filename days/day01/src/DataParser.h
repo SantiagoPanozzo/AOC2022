@@ -13,10 +13,14 @@ class DataParser {
 public:
     void LoadData(std::string fileName);
     int GetLargest();
+    int ThreeLargest();
+    void SortLargest();
 
 private:
+    int Largest;
+    int SecondL;
+    int ThirdL;
     std::vector<std::vector<std::string>> Data;
-
 };
 
 
