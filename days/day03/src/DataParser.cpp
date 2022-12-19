@@ -4,7 +4,6 @@
 
 #include <fstream>
 #include "DataParser.h"
-#include <cstring>
 #include <algorithm>
 
 using namespace std;
